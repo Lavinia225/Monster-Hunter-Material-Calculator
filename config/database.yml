@@ -79,6 +79,4 @@ test:
 #
 production:
   <<: *default
-  database: mhmc_production
-  username: mhmc
-  password: <%= ENV["MHMC_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
