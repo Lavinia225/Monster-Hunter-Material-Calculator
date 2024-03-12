@@ -1,0 +1,2 @@
+class ArmorMaterial < ApplicationRecord
+end

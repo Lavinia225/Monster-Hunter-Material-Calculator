@@ -1,0 +1,2 @@
+class ArmorSkill < ApplicationRecord
+end
