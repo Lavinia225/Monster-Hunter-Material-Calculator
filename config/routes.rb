@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  resources :monsters, only: [:index]
+  resources :skills, only: [:index]
 end
