@@ -9,7 +9,6 @@ class Armor < ApplicationRecord
     validates :name, presence: true
     validates :armor_set_id, presence: true
     validates :slot, {presence: true, inclusion: {in: %w(head chest arms waist leg)}}
-    validates :rarity, {presence: true, numericality: {in: (1..10)}}
     validates :defense, {presence: true, numericality: {in: (1..126)}}
     validates :decor_one, {presence: true, numericality: {in: (0..4)}}
     validates :decor_two, {presence: true, numericality: {in: (0..4)}}

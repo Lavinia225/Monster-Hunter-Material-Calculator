@@ -7,4 +7,5 @@ class ArmorSet < ApplicationRecord
     has_many :monsters, through: :materials
 
     validates :name, presence: true
+    validates :rarity, {presence: true, numericality: {in: (1..10)}}
 end
