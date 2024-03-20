@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  get '/armor_sets/:rank', to: 'armor_sets#index'
   resources :monsters, only: [:index]
   resources :skills, only: [:index]
 end
