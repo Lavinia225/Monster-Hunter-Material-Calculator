@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_20_210356) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_20_230939) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -52,6 +52,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_20_210356) do
     t.integer "dragon_res"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "cost"
   end
 
   create_table "materials", force: :cascade do |t|

@@ -18,4 +18,5 @@ class Armor < ApplicationRecord
     validates :thunder_res, {presence: true, numericality: {in: (-5..4)}}
     validates :ice_res, {presence: true, numericality: {in: (-5..4)}}
     validates :dragon_res, {presence: true, numericality: {in: (-5..4)}}
+    validates :cost, presence: true
 end
