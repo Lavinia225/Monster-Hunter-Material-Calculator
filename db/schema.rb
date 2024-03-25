@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_20_230939) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_25_225922) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -57,13 +57,33 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_20_230939) do
 
   create_table "materials", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "monster_materials", force: :cascade do |t|
     t.integer "monster_id"
+    t.integer "material_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "monsters", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "natural_materials", force: :cascade do |t|
+    t.integer "material_id"
+    t.integer "natural_source_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "natural_sources", force: :cascade do |t|
+    t.string "source"
+    t.string "rank"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

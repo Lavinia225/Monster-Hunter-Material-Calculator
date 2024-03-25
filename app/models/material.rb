@@ -1,8 +1,10 @@
 class Material < ApplicationRecord
-    belongs_to :monster
+    has_many :monster_materials, dependent: :destroy
+    has_many :monsters, through: :monster_materials
+    has_many :natural_materials, dependent: :destroy
+    has_many :natural_sources, through: :natural_materials
     has_many :armor_materials, dependent: :destroy
     has_many :armors, through: :armor_materials
 
     validates :name, presence: true
-    validates :monster_id, presence: true
 end
