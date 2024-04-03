@@ -7,4 +7,5 @@ class Material < ApplicationRecord
     has_many :armors, through: :armor_materials
 
     validates :name, presence: true
+    validates :rank, {presence: true, inclusion: {in: %w"Low High Master"}}
 end
