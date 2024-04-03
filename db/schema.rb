@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_25_225922) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_25_231025) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -86,6 +86,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_25_225922) do
     t.string "rank"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "locale"
   end
 
   create_table "skills", force: :cascade do |t|
